@@ -91,7 +91,7 @@ $JsLibrary = new create();
                             <label for="street" class="form-label">
                                 <?= lang('Companies.street') ?>
                             </label>
-                            <input type="text" id="street" name="street" maxLength="200" class="form-control<?= ($ferr = session('formErrors.abn')) ? ' is-invalid' : '' ?>" value="<?= isset($oldInput) && $oldInput['abn'] ? $oldInput['street'] : old('abn', $company->street) ?>">
+                            <input type="text" id="street" name="street" maxLength="200" class="form-control<?= ($ferr = session('formErrors.abn')) ? ' is-invalid' : '' ?>" value="<?= isset($oldInput) && $oldInput['street'] ? $oldInput['street'] : old('street', $company->street) ?>">
                             <?php if ($ferr) { ?>
                                 <div class="invalid-feedback">
                                     <?= $ferr ?>
@@ -312,6 +312,7 @@ $JsLibrary = new create();
                             </div>
                         <?php } ?>
                     </div>
+                    </div>
                     <!--//.mb-3 -->
 
                 <!-- Mobile Number -->
@@ -332,7 +333,6 @@ $JsLibrary = new create();
                                 </div>
                             <?php } ?>
                         </div>
-                    </div>
 
                 <!-- Title -->
 
