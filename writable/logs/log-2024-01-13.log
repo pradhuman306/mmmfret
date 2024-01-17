@@ -1,0 +1,391 @@
+INFO - 2024-01-13 03:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:10 --> CSRF token verified.
+INFO - 2024-01-13 03:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:27:54 --> CSRF token verified.
+INFO - 2024-01-13 03:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:28:20 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:28:24 --> CSRF token verified.
+INFO - 2024-01-13 03:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:29:18 --> CSRF token verified.
+INFO - 2024-01-13 03:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:29:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:29:18 --> CSRF token verified.
+INFO - 2024-01-13 03:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:29:23 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:34:13 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:35:19 --> CSRF token verified.
+INFO - 2024-01-13 03:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:36:33 --> CSRF token verified.
+INFO - 2024-01-13 03:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:36:37 --> CSRF token verified.
+INFO - 2024-01-13 03:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:36:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:36:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:38:59 --> CSRF token verified.
+INFO - 2024-01-13 03:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:39:01 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:39:03 --> CSRF token verified.
+INFO - 2024-01-13 03:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:39:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:39:03 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:40:37 --> CSRF token verified.
+INFO - 2024-01-13 03:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:40:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:40:37 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:40:42 --> CSRF token verified.
+INFO - 2024-01-13 03:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:40:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:40:42 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:32 --> CSRF token verified.
+INFO - 2024-01-13 03:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:41:35 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/xeroSalesGstViews/_xeroSalesGstFormItems.php on line 110.
+ 1 APPPATH/Views/admin/xeroSalesGstViews/_xeroSalesGstFormItems.php(110): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/xeroSalesGstViews/_xeroSalesGstFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/xeroSalesGstViews/_xeroSalesGstFormItems', [], true)
+ 5 APPPATH/Views/admin/xeroSalesGstViews/viewXeroSalesGstForm.php(14): view('admin/xeroSalesGstViews/_xeroSalesGstFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/xeroSalesGstViews/viewXeroSalesGstForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/xeroSalesGstViews/viewXeroSalesGstForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/xeroSalesGstViews/viewXeroSalesGstForm', [...])
+10 APPPATH/Controllers/Admin/XeroSalesGstsController.php(166): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\XeroSalesGstsController::add')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\XeroSalesGstsController->add()
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\XeroSalesGstsController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:37 --> CSRF token verified.
+INFO - 2024-01-13 03:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:38 --> CSRF token verified.
+INFO - 2024-01-13 03:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:41:40 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/timezoneViews/_timezoneFormItems.php on line 102.
+ 1 APPPATH/Views/admin/timezoneViews/_timezoneFormItems.php(102): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/timezoneViews/_timezoneFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/timezoneViews/_timezoneFormItems', [], true)
+ 5 APPPATH/Views/admin/timezoneViews/viewTimezoneForm.php(14): view('admin/timezoneViews/_timezoneFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/timezoneViews/viewTimezoneForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/timezoneViews/viewTimezoneForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/timezoneViews/viewTimezoneForm', [...])
+10 APPPATH/Controllers/Admin/TimezonesController.php(161): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\TimezonesController::add')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\TimezonesController->add()
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TimezonesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:41:41 --> CSRF token verified.
+INFO - 2024-01-13 03:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:41:41 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/timezoneViews/_timezoneFormItems.php on line 102.
+ 1 APPPATH/Views/admin/timezoneViews/_timezoneFormItems.php(102): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/timezoneViews/_timezoneFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/timezoneViews/_timezoneFormItems', [], true)
+ 5 APPPATH/Views/admin/timezoneViews/viewTimezoneForm.php(14): view('admin/timezoneViews/_timezoneFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/timezoneViews/viewTimezoneForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/timezoneViews/viewTimezoneForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/timezoneViews/viewTimezoneForm', [...])
+10 APPPATH/Controllers/Admin/TimezonesController.php(161): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\TimezonesController::add')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\TimezonesController->add()
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TimezonesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:41:47 --> CSRF token verified.
+INFO - 2024-01-13 03:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:42:43 --> CSRF token verified.
+INFO - 2024-01-13 03:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:42:46 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:42:50 --> CSRF token verified.
+INFO - 2024-01-13 03:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:42:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:42:50 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:54:33 --> CSRF token verified.
+INFO - 2024-01-13 03:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 03:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:54:35 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2024-01-13 03:54:36 --> CSRF token verified.
+INFO - 2024-01-13 03:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 03:54:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\CompaniesController::$validationErrors is deprecated in APPPATH/Controllers/GoBaseResourceController.php on line 259.
+ 1 APPPATH/Controllers/Admin/CompaniesController.php(240): App\Controllers\GoBaseResourceController->canValidate()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+WARNING - 2024-01-13 03:54:36 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+CRITICAL - 2024-01-13 03:59:00 --> Constant expression contains invalid operations
+in APPPATH/Models/Admin/CompanyModel.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-01-13 23:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 23:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 23:52:22 --> CSRF token verified.
+INFO - 2024-01-13 23:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 23:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-01-13 23:52:22 --> [DEPRECATED] json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in APPPATH/Views/admin/companyViews/_companyFormItems.php on line 289.
+ 1 APPPATH/Views/admin/companyViews/_companyFormItems.php(289): json_decode(null)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/_companyFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/_companyFormItems', [], true)
+ 5 APPPATH/Views/admin/companyViews/viewCompanyForm.php(16): view('admin/companyViews/_companyFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/companyViews/viewCompanyForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/companyViews/viewCompanyForm', [], true)
+ 9 APPPATH/Controllers/GoBaseResourceController.php(170): view('admin/companyViews/viewCompanyForm', [...])
+10 APPPATH/Controllers/Admin/CompaniesController.php(288): App\Controllers\GoBaseResourceController->displayForm('App\\Controllers\\Admin\\CompaniesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CompaniesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CompaniesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+CRITICAL - 2024-01-13 23:52:52 --> Constant expression contains invalid operations
+in APPPATH/Models/Admin/CompanyModel.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-13 23:59:06 --> Constant expression contains invalid operations
+in APPPATH/Models/Admin/CompanyModel.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-01-13 23:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-13 23:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-13 23:59:07 --> Constant expression contains invalid operations
+in APPPATH/Models/Admin/CompanyModel.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-01-13 23:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-13 23:59:15 --> Constant expression contains invalid operations
+in APPPATH/Models/Admin/CompanyModel.php on line 61.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

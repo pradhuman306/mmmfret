@@ -1,0 +1,198 @@
+INFO - 2023-12-21 00:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:28:04 --> CSRF token verified.
+INFO - 2023-12-21 00:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 00:28:04 --> Undefined variable $loggedInUsername
+in APPPATH/Controllers/Admin/CropTypesController.php on line 165.
+ 1 APPPATH/Controllers/Admin/CropTypesController.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Controllers/Admin/CropTypesController.php', 165)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 00:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:32:17 --> CSRF token verified.
+INFO - 2023-12-21 00:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:36:53 --> CSRF token verified.
+INFO - 2023-12-21 00:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:37:39 --> CSRF token verified.
+INFO - 2023-12-21 00:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 00:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 00:39:52 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 00:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 00:57:15 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 00:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 00:58:32 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 01:04:40 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 01:06:08 --> Undefined variable $isEditPag
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isEditPag', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 01:06:22 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(227): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 01:09:42 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(233): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-21 01:11:48 --> Undefined variable $loggedInUsername
+in APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php on line 108.
+ 1 APPPATH/Views/admin/cropTypeViews/_cropTypeFormItems.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $loggedInUsername', '/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php', 108)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/_cropTypeFormItems.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/_cropTypeFormItems', [], true)
+ 5 APPPATH/Views/admin/cropTypeViews/viewCropTypeForm.php(16): view('admin/cropTypeViews/_cropTypeFormItems')
+ 6 SYSTEMPATH/View/View.php(228): include('/Users/tonypeter/Downloads/MMMFret/app/Views/admin/cropTypeViews/viewCropTypeForm.php')
+ 7 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('admin/cropTypeViews/viewCropTypeForm', [], true)
+ 9 APPPATH/Controllers/GoBaseController.php(277): view('admin/cropTypeViews/viewCropTypeForm', [...])
+10 APPPATH/Controllers/Admin/CropTypesController.php(232): App\Controllers\GoBaseController->displayForm('App\\Controllers\\Admin\\CropTypesController::edit', '1')
+11 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Admin\CropTypesController->edit('1')
+12 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CropTypesController))
+13 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/tonypeter/Downloads/MMMFret/public/index.php')
+INFO - 2023-12-21 01:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:08 --> CSRF token verified.
+INFO - 2023-12-21 01:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:55 --> CSRF token verified.
+INFO - 2023-12-21 01:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-21 01:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
