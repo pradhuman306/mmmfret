@@ -1,14 +1,8 @@
-html,
 body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
+  background: #000;
+  /* padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; */
 }
 
 .form-signin {
@@ -61,4 +55,61 @@ body {
 
 .invalid-feedback {
   margin-bottom: 0.5em;
+}
+
+.auth-form {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-form .row>* {
+  padding: 0;
+}
+
+.auth-form label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #00ac69;
+}
+.col-left {
+  max-height: 100vh;
+  overflow: auto;
+  background: #191c24;
+  min-height: 100vh;
+}
+.auth-form-wrap {
+  padding: 40px;
+}
+
+.auth-form-wrap input[type="text"],
+.auth-form-wrap input[type="email"],
+.auth-form-wrap input[type="password"] {
+  background: #2a3038 !important;
+  border: 1px solid #2a3038;
+  padding: 12px;
+  color: #fff;
+}
+
+.auth-form-wrap input ::-webkit-input-placeholder {
+  color: #5f6581 !important;
+}
+
+.auth-form-wrap input ::-moz-placeholder {
+  color: #5f6581 !important;
+}
+
+/* firefox 19+ */
+.auth-form-wrap input :-ms-input-placeholder {
+  color: #5f6581 !important;
+}
+
+/* ie */
+.auth-form-wrap input:-moz-placeholder {
+  color: #5f6581 !important;
+}
+
+.auth-form-wrap input:focus {
+  outline: none;
+  box-shadow: none !important;
+  border: 0;
 }

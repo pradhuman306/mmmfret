@@ -3,40 +3,45 @@
 <?=$this->include('Themes/_commonPartialsBs/sweetalert') ?>
 <?=$this->extend('Themes/'.config('Basics')->theme['name'].'/AdminLayout/defaultLayout') ?>
 <?=$this->section('content');  ?>
-<div class="row">
 
-        <div class="col-md-12">
+
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="card card-info">
             <div class="card-header">
-                <h3 class="card-title"><?=lang('Companies.companyList') ?></h3>
-                <?=anchor(route_to('newCompany'), lang('Basic.global.addNew').' '.lang('Companies.company'), ['class'=>'btn btn-success float-end']); ?>
+            <h3 class="card-title"><?=lang('Companies.companyList') ?></h3>
+            <?=anchor(route_to('newCompany'), lang('Basic.global.addNew').' '.lang('Companies.company'), ['class'=>'btn btn-success float-end']); ?>
            </div><!--//.card-header -->
-           <br>
             <div class="card-body">
 				<?= view('Themes/_commonPartialsBs/_alertBoxes'); ?>
-
-					<table id="tableOfCompanies" class="table table-striped table-hover" style="width: 100%;">
-						<thead>
-							<tr>
-								<th><?= lang('Companies.companyName') ?></th>
-								<th><?= lang('Companies.street') ?></th>
-								<th><?= lang('Companies.suburb') ?></th>
-								<th><?= lang('Companies.state') ?></th>
-								<th><?= lang('Companies.postcode') ?></th>
-								<th><?= lang('Companies.firstName') ?></th>
-								<th><?= lang('Companies.lastName') ?></th>
-								<th><?= lang('Companies.phoneNo') ?></th>
-								<th><?= lang('Companies.emailAddress') ?></th>
-								<th class="text-nowrap"><?= lang('Basic.global.Action') ?></th>
-							</tr>
-						</thead>
-						<tbody>
-
-						</tbody>
-					</table>
+            <br>
+                <table id="tableOfCompanies" class="table table-striped table-hover" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th><?= lang('Companies.companyName') ?></th>
+                            <th><?= lang('Companies.street') ?></th>
+                            <th><?= lang('Companies.suburb') ?></th>
+                            <th><?= lang('Companies.state') ?></th>
+                            <th><?= lang('Companies.postcode') ?></th>
+                            <th><?= lang('Companies.firstName') ?></th>
+                            <th><?= lang('Companies.lastName') ?></th>
+                            <th><?= lang('Companies.phoneNo') ?></th>
+                            <th><?= lang('Companies.emailAddress') ?></th>
+                            <th class="text-nowrap"><?= lang('Basic.global.Action') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table body content goes here -->
+                    </tbody>
+                </table>
             </div><!--//.card-body -->
         </div><!--//.card -->
     </div><!--//.col -->
 </div><!--//.row -->
+
+
 
 <?=$this->endSection() ?>
 
@@ -63,13 +68,45 @@
                 lengthChange: true,
                 "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
-		],
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
+            }
+        }
+    ],
+
                 stateSave: true,
                 order: [[1, 'asc']],
                 language: {
@@ -109,9 +146,10 @@ $(document).on('click', '.btn-edit', function(e) {
         window.location.href = `<?= base_url().route_to('companyList') ?>/${$(this).attr('data-id')}/edit`;
     });
     
-$(document).on('click', '.btn-delete', function(e) {
+    $(document).on('click', '.btn-delete', function(e) {
+        const itemName = $(this).closest('tr').find('td:first-child').text().trim();
         Swal.fire({
-            title: '<?= lang('Basic.global.sweet.sureToDeleteTitle', [mb_strtolower(lang('Companies.company'))]) ?>',
+            title: `Are you sure you want to delete "${itemName}"?`,
             text: '<?= lang('Basic.global.sweet.sureToDeleteText') ?>',
             icon: 'warning',
             showCancelButton: true,
@@ -157,6 +195,7 @@ $(document).on('click', '.btn-delete', function(e) {
 
 
 <?= $this->section('additionalExternalJs') ?>
+
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" defer></script>

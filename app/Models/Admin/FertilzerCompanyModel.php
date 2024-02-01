@@ -12,29 +12,48 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
      */
     protected $useAutoIncrement = true;
 
+    const SORTABLE = [
+        1 => "t1.id",
+        2 => "t1.fertilzer",
+        3 => "t1.symbol",
+        4 => "t1.nitrogen",
+        5 => "t1.phosphorus",
+        6 => "t1.potassium",
+        7 => "t1.calcium",
+        8 => "t1.sulfur",
+        9 => "t1.magnesium",
+        10 => "t1.maganense",
+        11 => "t1.boron",
+        12 => "t2.category",
+    ];
+
     protected $allowedFields = [
-        "company",
-        "client_id",
-        "invoice_prefix",
-        "status",
-        "registration_date",
-        "street",
-        "suburb",
-        "postcode",
-        "state",
-        "country",
-        "phone_number",
-        "mobile_number",
-        "abn",
-        "division",
-        "last_name",
-        "first_name",
-        "email_address",
-        "updated_at",
+        "fertilzer",
+        "symbol",
+        "nitrogen",
+        "phosphorus",
+        "potassium",
+        "calcium",
+        "sulfur",
+        "magnesium",
+        "maganense",
+        "boron",
+        "created_by",
+        "updated_by",
+        "cost_unit_default",
+        "category",
     ];
     protected $returnType = "App\Entities\Admin\FertilzerCompany";
 
-    public static $labelField = "company";
+
+    protected $useTimestamps = true;
+    protected $useSoftDeletes = true;
+
+    protected $createdField = "created_at";
+    protected $updatedField = "updated_at";
+    protected $deletedField  = 'deleted_at';
+
+    public static $labelField = "title";
 
     protected $validationRules = [
         "abn" => [
@@ -53,6 +72,14 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
             "label" => "FertilzerCompanies.country",
             "rules" => "trim|max_length[100]",
         ],
+        "created_at" => [
+            "label" => "Companies.createdAt",
+            "rules" => "max_length[20]",
+        ],
+        "created_by" => [
+            "label" => "Companies.createdBy",
+            "rules" => "trim|max_length[150]",
+        ],
         "division" => [
             "label" => "FertilzerCompanies.division",
             "rules" => "trim|max_length[100]",
@@ -65,11 +92,7 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
             "label" => "FertilzerCompanies.firstName",
             "rules" => "trim|max_length[211]",
         ],
-        "invoice_prefix" => [
-            "label" => "FertilzerCompanies.invoicePrefix",
-            "rules" => "trim|required|max_length[40]",
-        ],
-        "last_name" => [
+         "last_name" => [
             "label" => "FertilzerCompanies.lastName",
             "rules" => "trim|max_length[211]",
         ],
@@ -77,9 +100,9 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
             "label" => "FertilzerCompanies.mobileNumber",
             "rules" => "trim|max_length[20]",
         ],
-        "phone_number" => [
-            "label" => "FertilzerCompanies.phoneNumber",
-            "rules" => "trim|max_length[20]",
+        "phone_no" => [
+            "label" => "FertilzerCompanies.phoneNo",
+            "rules" => "trim|max_length[50]",
         ],
         "postcode" => [
             "label" => "FertilzerCompanies.postcode",
@@ -105,9 +128,17 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
             "label" => "FertilzerCompanies.suburb",
             "rules" => "trim|max_length[150]",
         ],
+        "title" => [
+            "label" => "FertilzerCompanies.title",
+            "rules" => "trim|max_length[300]",
+        ],
         "updated_at" => [
-            "label" => "FertilzerCompanies.updatedAt",
+            "label" => "Companies.updatedAt",
             "rules" => "max_length[20]",
+        ],
+        "updated_by" => [
+            "label" => "Companies.updatedBy",
+            "rules" => "trim|max_length[150]",
         ],
     ];
 
@@ -131,12 +162,14 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
             "max_length" => "FertilzerCompanies.validation.email_address.max_length",
             "valid_email" => "FertilzerCompanies.validation.email_address.valid_email",
         ],
+        "created_at" => [
+            "max_length" => "Companies.validation.created_at.max_length",
+        ],
+        "created_by" => [
+            "max_length" => "Companies.validation.created_by.max_length",
+        ],
         "first_name" => [
             "max_length" => "FertilzerCompanies.validation.first_name.max_length",
-        ],
-        "invoice_prefix" => [
-            "max_length" => "FertilzerCompanies.validation.invoice_prefix.max_length",
-            "required" => "FertilzerCompanies.validation.invoice_prefix.required",
         ],
         "last_name" => [
             "max_length" => "FertilzerCompanies.validation.last_name.max_length",
@@ -144,8 +177,8 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
         "mobile_number" => [
             "max_length" => "FertilzerCompanies.validation.mobile_number.max_length",
         ],
-        "phone_number" => [
-            "max_length" => "FertilzerCompanies.validation.phone_number.max_length",
+        "phone_no" => [
+            "max_length" => "FertilzerCompanies.validation.phone_no.max_length",
         ],
         "postcode" => [
             "max_length" => "FertilzerCompanies.validation.postcode.max_length",
@@ -165,8 +198,43 @@ class FertilzerCompanyModel extends \App\Models\GoBaseModel
         "suburb" => [
             "max_length" => "FertilzerCompanies.validation.suburb.max_length",
         ],
+        "title" => [
+            "max_length" => "FertilzerCompanies.validation.title.max_length",
+        ],
         "updated_at" => [
-            "max_length" => "FertilzerCompanies.validation.updated_at.max_length",
+            "max_length" => "Companies.validation.updated_at.max_length",
+        ],
+        "updated_by" => [
+            "max_length" => "Companies.validation.updated_by.max_length",
         ],
     ];
+
+    public function getResource(string $search = "")
+    {
+        $builder = $this->db
+            ->table($this->table . " t1")
+            ->select(
+                "t1.id AS id, t1.fertilzer AS fertilzer, t1.symbol AS symbol, t1.nitrogen AS nitrogen, t1.phosphorus AS phosphorus, t1.potassium AS potassium, t1.calcium AS calcium, t1.sulfur AS sulfur, t1.magnesium AS magnesium, t1.maganense AS maganense, t1.boron AS boron, t2.category AS category"
+            );
+        $builder->join("categories t2", "t1.category = t2.id", "left");
+
+        return empty($search)
+            ? $builder
+            : $builder
+                ->groupStart()
+                ->like("t1.id", $search)
+                ->orLike("t1.fertilzer", $search)
+                ->orLike("t1.symbol", $search)
+                ->orLike("t1.nitrogen", $search)
+                ->orLike("t1.phosphorus", $search)
+                ->orLike("t1.potassium", $search)
+                ->orLike("t1.calcium", $search)
+                ->orLike("t1.sulfur", $search)
+                ->orLike("t1.magnesium", $search)
+                ->orLike("t1.maganense", $search)
+                ->orLike("t1.boron", $search)
+                ->orLike("t2.id", $search)
+                ->orLike("t2.category", $search)
+                ->groupEnd();
+    }
 }

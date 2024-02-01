@@ -32,8 +32,8 @@ $JsLibrary = new create();
                     }
                     ?>
                     <input type="datetime-local" id="createdAt" name="created_at" maxLength="20"
-                        class="form-control<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
-                        value="<?= old('created_at', $xeroSalesGst->created_at) ?>" readonly> <!-- Added readonly attribute here -->
+                        class="form-control-disabled<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
+                        value="<?= old('created_at', $xeroSalesGst->created_at) ?>" readonly> 
                     <?php if ($ferr) { ?>
                         <div class="invalid-feedback">
                             <?= $ferr ?>
@@ -48,8 +48,8 @@ $JsLibrary = new create();
                     <?= lang('Updated At') ?>
 				</label>
 				<input type="datetime-local" id="updatedAt" name="updated_at" maxLength="20"
-					class="form-control<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
-					value="<?= old('updated_at', $xeroSalesGst->formatted_updated_at ?? $xeroSalesGst->updated_at) ?>">
+					class="form-control-disabled<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
+					value="<?= old('updated_at', $xeroSalesGst->formatted_updated_at ?? $xeroSalesGst->updated_at) ?>" readonly>
 				<?php if ($ferr): ?>
 					<div class="invalid-feedback">
 						<?= $ferr ?>
@@ -78,7 +78,7 @@ $JsLibrary = new create();
                     <?= lang('Created By') ?>
                 </label>
                 <input type="text" id="createdBy" name="created_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isAddPage ? $loggedInUsername : old('created_by', $xeroSalesGst->created_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">
@@ -94,18 +94,18 @@ $JsLibrary = new create();
                 		<?= lang('Updated By') ?>
                 	</label>
                 <input type="text" id="updatedBy" name="updated_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isEditPage ? $loggedInUsername : old('updated_by', $xeroSalesGst->updated_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">
                         <?= $ferr ?>
                     	</div>
                 	<?php } ?>
-            	</div><!--//.mb-3 -->				
-            </div><!--//.col -->
-        </div><!-- //.row -->
+					</div><!--//.mb-3 -->	
+				</div><!--//.col -->
+			</div><!-- //.row -->
 
-		<!-- <script src="app/libaries/create.js"></script> -->
-		<?php 
+<!-- <script src="app/libaries/create.js"></script> -->
+	<?php 
 		echo json_decode($JsLibrary->index());
-		?>
+	?>

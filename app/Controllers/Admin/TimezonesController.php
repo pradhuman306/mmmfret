@@ -76,7 +76,9 @@ class TimezonesController extends GoBaseResourceController {
             $loggedInUsername = $user->username; 
         }
     
-        if ($this->request->getPost()) { 
+        $requestMethod = $this->request->getMethod();
+    
+        if ($requestMethod === 'post') {
     
             // Define validation rules
             $validationRules = [

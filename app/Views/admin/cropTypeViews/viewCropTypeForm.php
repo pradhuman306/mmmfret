@@ -8,19 +8,20 @@
 			<div class="card-header">
         		<h3 class="card-title"><?= $boxTitle ?? $pageTitle ?></h3>
 			</div><!--//.card-header -->
+			<div class="card-body">
 			<form id="cropTypeForm" method="post" action="<?= $formAction ?>">
 				<?= csrf_field() ?>
 			<div class="card-body">
 				<?= view("Themes/_commonPartialsBs/_alertBoxes") ?>
 				<?= !empty($validation->getErrors()) ? $validation->listErrors("bootstrap_style") : "" ?>
 				<?= view("admin/cropTypeViews/_cropTypeFormItems") ?>
-			</div><!-- /.card-body -->
-			<div class="card-footer">
+				</div><!-- /.card-body -->
 				<?= anchor(route_to("cropTypeList"), lang("Basic.global.Cancel"), ["class" => "btn btn-secondary float-start"]) ?>
 				<input type="submit" class="btn btn-primary float-end" name="save" value="<?= lang("Basic.global.Save") ?>">
-			</div><!-- /.card-footer -->
-			</form>
-    </div><!-- //.card -->
-    </div><!--//.col -->
-</div><!--//.row -->
+				<?= form_close() ?>
+    	</div><!--//.col -->
+	</div><!--//.row -->
+
 <?= $this->endSection() ?>
+
+

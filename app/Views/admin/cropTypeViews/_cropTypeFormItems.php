@@ -37,8 +37,8 @@ $JsLibrary = new create();
                     }
                     ?>
                     <input type="datetime-local" id="createdAt" name="created_at" maxLength="20"
-                        class="form-control<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
-                        value="<?= old('created_at', $cropType->created_at) ?>" readonly> <!-- Added readonly attribute here -->
+                        class="form-control-disabled<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
+                        value="<?= old('created_at', $cropType->created_at) ?>" readonly>
                     <?php if ($ferr) { ?>
                         <div class="invalid-feedback">
                             <?= $ferr ?>
@@ -54,8 +54,8 @@ $JsLibrary = new create();
                     <?= lang('CropTypes.updatedAt') ?>
                 </label>
                 <input type="datetime-local" id="updatedAt" name="updated_at" maxLength="20"
-                    class="form-control<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
-                    value="<?= old('updated_at', $cropType->formatted_updated_at ?? $cropType->updated_at) ?>">
+                    class="form-control-disabled<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
+                    value="<?= old('updated_at', $cropType->formatted_updated_at ?? $cropType->updated_at) ?>" readonly>
                 <?php if ($ferr): ?>
                     <div class="invalid-feedback">
                         <?= $ferr ?>
@@ -63,16 +63,6 @@ $JsLibrary = new create();
                 <?php endif; ?>
             </div><!--//.mb-3 -->
 
- <!-- Active Tick box -->            
-
-            <div class="mb-3">
-                <div class="form-check">
-                    <label for="active" class="form-check-label">
-                        <input type="checkbox" id="active" name="active" value="1"  class="form-check-input"<?= $cropType->active == true ? 'checked' : ''; ?>>
-                           <?= lang('CropTypes.active') ?>
-                    </label>
-                </div><!--//.form-check -->
-            </div><!--//.mb-3 -->
 
  <!-- Variety -->               
 
@@ -99,7 +89,7 @@ $JsLibrary = new create();
                     <?= lang('CropTypes.createdBy') ?>
                 </label>
                 <input type="text" id="createdBy" name="created_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isAddPage ? $loggedInUsername : old('created_by', $cropType->created_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">
@@ -115,30 +105,22 @@ $JsLibrary = new create();
                 <?= lang('CropTypes.updatedBy') ?>
                 </label>
                 <input type="text" id="updatedBy" name="updated_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isEditPage ? $loggedInUsername : old('updated_by', $cropType->updated_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">
                         <?= $ferr ?>
                     </div>
                 <?php } ?>
-            </div><!--//.mb-3 -->
-
-
-
+            	</div><!--//.mb-3 -->	
 
             </div><!--//.col -->
 
         </div><!-- //.row -->
 
-        </div><!--//.col -->
-
-        </div><!-- //.row -->
-
-        <input type="hidden" id="browserTime" name="browserTime" value="">
-
-
-        <?php 
+		<!-- <script src="app/libaries/create.js"></script> -->
+		<?php 
 		echo json_decode($JsLibrary->index());
 		?>
+
 

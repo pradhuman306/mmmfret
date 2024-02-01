@@ -131,7 +131,7 @@ public $activeResetter = 'Myth\Auth\Authentication\Resetters\EmailResetter';
 // you might not want the extra risk associated with this cookie-based
 // solution.
 //
-public $allowRemembering = true;
+public $allowRemembering = false;
 
 //--------------------------------------------------------------------
 // Remember Length

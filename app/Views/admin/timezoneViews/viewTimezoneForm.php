@@ -2,11 +2,14 @@
 <?= $this->include("Themes/_commonPartialsBs/sweetalert") ?>
 <?= $this->extend("Themes/" . config("Basics")->theme["name"] . "/AdminLayout/defaultLayout") ?>
 <?= $this->section("content") ?>
+
 <div class="row">
     <div class="col-12">
+	<div class="card card-info">
 			<div class="card-header">
 			<h3 class="card-title"><?= $boxTitle ?? $pageTitle ?></h3>
 			</div><!--//.card-header -->
+			<div class="card-body">
 			<?= form_open($formAction, ["id" => "timezoneForm"]) ?>
 			<div class="card-body">
 				<?= view("Themes/_commonPartialsBs/_alertBoxes") ?>

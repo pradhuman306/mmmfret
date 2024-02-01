@@ -9,25 +9,25 @@ class SoilTestLab extends \CodeIgniter\Entity\Entity
         "id" => null,
         "company" => null,
         "client_id" => null,
-        "invoice_prefix" => null,
-        "status" => null,
-        "registration_date" => null,
         "street" => null,
         "suburb" => null,
+        "updated_at" => null,
+        "title" => null,
+        "updated_by" => null,
+        "created_by" => null,
+        "created_at" => null,
         "postcode" => null,
         "state" => null,
         "country" => null,
-        "phone_number" => null,
+        "phone_no" => null,
         "mobile_number" => null,
         "abn" => null,
-        "division" => null,
         "last_name" => null,
         "first_name" => null,
         "email_address" => null,
     ];
     protected $casts = [
         "client_id" => "?int",
-        "status" => "?int",
     ];
     /**
      * Returns a full name: "first last"

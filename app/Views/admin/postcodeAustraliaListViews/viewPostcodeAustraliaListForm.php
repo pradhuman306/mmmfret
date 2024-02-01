@@ -9,15 +9,11 @@
         		<h3 class="card-title"><?= $boxTitle ?? $pageTitle ?></h3>
 			</div><!--//.card-header -->
 			<?= form_open($formAction, ["id" => "postcodeAustraliaListForm"]) ?>
-			<div class="card-body">
-				<?= view("Themes/_commonPartialsBs/_alertBoxes") ?>
+            <div class="card-body">
+				<?= csrf_field() ?>
 				<?= !empty($validation->getErrors()) ? $validation->listErrors("bootstrap_style") : "" ?>
 				<?= view("admin/postcodeAustraliaListViews/_postcodeAustraliaListFormItems") ?>
-			</div><!-- /.card-body -->
-			<div class="card-footer">
-				<?= anchor(route_to("postcodeAustraliaListList"), lang("Basic.global.Cancel"), [
-        "class" => "btn btn-secondary float-start",
-    ]) ?>
+				<?= anchor(route_to("postcodeAustraliaListList"), lang("Basic.global.Cancel"), ["class" => "btn btn-secondary float-start",]) ?>
 				<?= form_submit("save", lang("Basic.global.Save"), ["class" => "btn btn-primary float-end"]) ?>
 			</div><!-- /.card-footer -->
 			<?= form_close() ?>

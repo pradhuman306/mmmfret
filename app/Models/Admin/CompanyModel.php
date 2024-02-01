@@ -49,7 +49,6 @@ class CompanyModel extends \App\Models\GoBaseModel
         "lon",
         "lat",
         "title",
-        "logo_url",
     ];
     protected $returnType = "App\Entities\Admin\Company";
 
@@ -229,7 +228,7 @@ class CompanyModel extends \App\Models\GoBaseModel
             ->table($this->table . " t1")
             ->select(
                 "t1.id AS id, t1.company_name AS company_name, t1.street AS street, t1.postcode AS postcode, t1.first_name AS first_name, t1.last_name AS last_name, t1.phone_no AS phone_no, t1.email_address AS email_address, t2.suburb AS suburb, t3.state AS state"
-            );
+                )->where('t1.deleted_at', null);;
         $builder->join("postcode_australia_list t2", "t1.suburb = t2.id", "left");
         $builder->join("state t3", "t1.state = t3.state_id", "left");
 

@@ -2,15 +2,15 @@
 <?=$this->include('Themes/_commonPartialsBs/sweetalert') ?>
 <?=$this->extend('Themes/'.config('Basics')->theme['name'].'/AdminLayout/defaultLayout') ?>
 <?=$this->section('content');  ?>
-<div class="row">
 
-        <div class="col-md-12">
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-info">
             <div class="card-header">
                 <h3 class="card-title"><?=lang('Timezones.timezone') ?></h3>
                 <?=anchor(route_to('newTimezone'), lang('Basic.global.addNew').' '.lang('Timezones.timezone'), ['class'=>'btn btn-success float-end']); ?>
            </div><!--//.card-header -->
-           <br>
-              <div class="card-body">
+            <div class="card-body">
 				<?= view('Themes/_commonPartialsBs/_alertBoxes'); ?>
 					<table id="tableOfTimezones" class="table table-striped table-hover" style="width: 100%;">
 						<thead>
@@ -59,12 +59,43 @@
                 lengthChange: true,
                 "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
+            }
+        }
 		],
                 stateSave: true,
                 order: [[1, 'asc']],

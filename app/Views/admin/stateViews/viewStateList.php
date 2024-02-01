@@ -59,12 +59,43 @@
                 lengthChange: true,
                 "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
+            }
+        }
 		],
                 stateSave: true,
                 order: [[1, 'asc']],

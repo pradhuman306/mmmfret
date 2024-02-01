@@ -70,6 +70,8 @@ class UsersController extends \App\Controllers\GoBaseController {
             $nullIfEmpty = true; // !(phpversion() >= '8.1');
 
             $postData = $this->request->getPost();
+            $emailUSER = $postData['email'];
+            $passwordUSER = $postData['password'];
 			$permissions = $postData['permissions'] ?? $this->request->getPost('permissions');
 			$groups = $postData['groups'] ?? $this->request->getPost('groups');
 			unset($postData['permissions']);
@@ -90,7 +92,8 @@ class UsersController extends \App\Controllers\GoBaseController {
             
 
 			$user = new User($sanitizedData);
-
+            $this->session->setFlashData('firebase-email', $emailUSER);
+            $this->session->setFlashData('firebase-password', $passwordUSER);
 			$this->db = $this->model->db;
 			$this->db->transBegin();
     

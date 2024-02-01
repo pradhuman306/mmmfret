@@ -80,7 +80,9 @@ class CompaniesController extends GoBaseResourceController {
             $loggedInUsername = $user->username; 
         }
     
-        if ($this->request->getPost()) { 
+        $requestMethod = $this->request->getMethod();
+    
+        if ($requestMethod === 'post') {
 
             $id = $this->request->getPost('company_id') ?? null;
         
@@ -142,45 +144,16 @@ class CompaniesController extends GoBaseResourceController {
                         $sanitizedData[$k] = $sanitizationResult[0];
                     }
                 }
-                $file1 = isset($_FILES['logo_url']['size']) && $_FILES['logo_url']['size'] > 0 ? $this->request->getFile('logo_url') : null;
-                $fileName1 = $_FILES['logo_url']['name'];
-                $sanitizedData['id'] = 'id';
-                $sanitizedData['logo_url'] = $fileName1;
+            $sanitizedData['id'] = 'id';
 
                 $noException = true;
                 $successfulResult = $this->model->skipValidation(true)->insert($sanitizedData);
                 $sanitizedData['id'] = $id; // Assuming $id is the company_id
-                $thenRedirect = true;  // Change this to false if you want your user to stay on the form after submission
+            $thenRedirect = true;  // Change this to false if you want your user to stay on the form after submission
 
                 if ($noException && $successfulResult) :
 
                     $id = $sanitizedData['id'];
-                    if (isset($file1) && method_exists($file1,'isValid') && !$file1->hasMoved()) :
-				    $filePath1 = FCPATH . 'res/companies';
-				    try {
-				        $movedAlright = isset($fileName1) && !empty($fileName1) ? $file1->move($filePath1, $fileName1) : $file1->move($filePath1);
-                    } catch (\CodeIgniter\HTTP\Exceptions\HTTPException $he) {
-				        $movedAlright = false;
-				        log_message('error', 'File upload processing failed for field logo_url in the Companies module due to a HTTPException thrown:'.PHP_EOL.$he->getMessage());
-				    } catch (\Exception $e) {
-				        $movedAlright = false;
-				        log_message('error', 'File upload processing failed for field logo_url in the Companies module due to an unexpected exception thrown:'.PHP_EOL.$e->getMessage());
-				    }
-				    if (!$movedAlright):
-				        // Take further action to deal with unsuccessful upload
-				        log_message('error', 'logo_url file could not be saved in '.$filePath1.' due to a server error (possible reasons: insufficient permissions or server storage full).');
-				        $this->model->skipValidation(true)->update($id, ['logo_url' => null]);
-				        $this->session->setFlashData('errorMessage', 'Upload for logo_url has been unsuccessful due to a server error.');
-
-				    elseif ( isset($fileName1) && !empty($fileName1) && file_exists($filePath1.'/'.$fileName1)) :
-				        try {
-				            service('image')->withFile($filePath1.'/'.$fileName1)->fit(256, 256, 'center')->save($filePath1.'/'.$fileName1);
-				        } catch (\Exception $e) {
-				            log_message('error', 'Image resizing failed for field logo_url in the Companies module. Exception thrown:'.PHP_EOL.$e->getMessage());
-				        }
-				    endif;
-				endif;
-
     
                     $message = lang('Basic.global.saveSuccess', [mb_strtolower(lang('Companies.company'))]).'.';
                     $message .= anchor(base_url( "{$locale}/admin/companies/{$id}/edit" ), lang('Basic.global.continueEditing').'?');
@@ -208,7 +181,7 @@ class CompaniesController extends GoBaseResourceController {
         }
       
         $timezoneConverter = new TimezoneConverter();
-        $userId = user_id(); // Get the logged-in user's ID
+                $userId = user_id(); // Get the logged-in user's ID
         $formatted_created_at = $timezoneConverter->convertToUserTimezone(null, $userId, 'created_at', 'CompanyModel');
         $this->viewData['formatted_created_at'] = $formatted_created_at;
     
@@ -254,8 +227,9 @@ class CompaniesController extends GoBaseResourceController {
             return $this->redirect2listView('sweet-error', $message);
         endif;
 
+        $requestMethod = $this->request->getMethod();
 
-        if ($this->request->getPost()) { 
+        if ($requestMethod === 'post') {
             $nullIfEmpty = true; 
             // !(phpversion() >= '8.1');
             $id = filter_var($requestedId, FILTER_SANITIZE_NUMBER_INT);
@@ -304,7 +278,8 @@ class CompaniesController extends GoBaseResourceController {
                 $this->session->setFlashdata('formErrors', $this->validator->getErrors());
             }
         }
- 
+        
+
         $timezoneConverter = new TimezoneConverter();
         $userId = user_id(); // Get the logged-in user's ID
           // Convert the 'updated_at' field for company to the user's local timezone

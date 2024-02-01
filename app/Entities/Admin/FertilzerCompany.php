@@ -21,10 +21,14 @@ class FertilzerCompany extends \CodeIgniter\Entity\Entity
         "mobile_number" => null,
         "abn" => null,
         "division" => null,
+        "created_at" => null,
         "last_name" => null,
         "first_name" => null,
         "email_address" => null,
         "updated_at" => null,
+        "title" => null,
+        "created_by" => null,
+        "updated_by" => null,
     ];
     protected $casts = [
         "client_id" => "?int",

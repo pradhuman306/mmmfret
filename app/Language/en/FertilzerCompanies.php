@@ -3,10 +3,13 @@
 
 
 return [
-		'abn' => 'Abn',
+	'abn' => 'Abn',
 		'clientId' => 'Client ID',
 		'company' => 'Company',
 		'country' => 'Country',
+		'createdAt' => 'Created At',
+		'createdBy' => 'Created By',
+		'deletedAt' => 'Deleted At',
 		'division' => 'Division',
 		'emailAddress' => 'Email Address',
 		'fertilzer-companies' => 'Fertilzer Companies',
@@ -18,6 +21,7 @@ return [
 		'invoicePrefix' => 'Invoice Prefix',
 		'lastName' => 'Last Name',
 		'mobileNumber' => 'Mobile Number',
+		'phoneNo' => 'Phone No',
 		'moduleTitle' => 'Fertilzer Companies',
 		'phoneNumber' => 'Phone Number',
 		'postcode' => 'Postcode',
@@ -26,7 +30,9 @@ return [
 		'status' => 'Status',
 		'street' => 'Street',
 		'suburb' => 'Suburb',
+		'title' => 'Title',
 		'updatedAt' => 'Updated At',
+		'updatedBy' => 'Updated By',
 		'validation' =>  [
 			'abn' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
@@ -68,7 +74,7 @@ return [
 
 			],
 
-			'phone_number' =>  [
+			'phone_no' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
 
 			],
@@ -113,13 +119,6 @@ return [
 				'valid_email' => 'The {field} field must contain a valid email address.',
 
 			],
-
-			'invoice_prefix' =>  [
-				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
-				'required' => 'The {field} field is required.',
-
-			],
-
 
 		],
 

@@ -44,7 +44,7 @@ class PlantingTemplateModel extends \App\Models\GoBaseModel
      */
     public function getResource(string $search = "")
     {
-        $builder = $this->db->table($this->table . " t1")->select("t1.id AS id, t1.details AS details");
+        $builder = $this->db->table($this->table . " t1")->select("t1.id AS id, t1.details AS details") ->where('t1.deleted_at', null);;
 
         return empty($search)
             ? $builder

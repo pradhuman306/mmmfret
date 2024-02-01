@@ -1,72 +1,39 @@
+<?=$this->include('Themes/_commonPartialsBs/select2bs5') ?>
 <?=$this->include('Themes/_commonPartialsBs/datatables') ?>
 <?=$this->include('Themes/_commonPartialsBs/sweetalert') ?>
 <?=$this->extend('Themes/'.config('Basics')->theme['name'].'/AdminLayout/defaultLayout') ?>
 <?=$this->section('content');  ?>
-<div class="row">
 
-	<div class="col-md-12">
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-info">
             <div class="card-header">
-                <h3 class="card-title"><?=lang('FertilzerCompanies.fertilzerCompanyList') ?></h3>
+            <h3 class="card-title"><?=lang('FertilzerCompanies.fertilzerCompanies') ?></h3>
 				<?=anchor(route_to('newFertilzerCompany'), lang('Basic.global.addNew').' '.lang('FertilzerCompanies.fertilzerCompany'), ['class'=>'btn btn-success float-end']); ?>
            </div><!--//.card-header -->
-		   <br>
             <div class="card-body">
 				<?= view('Themes/_commonPartialsBs/_alertBoxes'); ?>
 
 					<table id="tableOfFertilzercompanies" class="table table-striped table-hover using-exportable-data-table" style="width: 100%;">
 						<thead>
 							<tr>
-								<th><?= lang('FertilzerCompanies.company') ?></th>
+                                <th><?= lang('FertilzerCompanies.company') ?></th>
 								<th><?= lang('FertilzerCompanies.street') ?></th>
 								<th><?= lang('FertilzerCompanies.suburb') ?></th>
-								<th><?= lang('FertilzerCompanies.state') ?></th>
 								<th><?= lang('FertilzerCompanies.postcode') ?></th>
-								<th><?= lang('FertilzerCompanies.phoneNumber') ?></th>
-								<th><?= lang('FertilzerCompanies.lastName') ?></th>
+								<th><?= lang('FertilzerCompanies.state') ?></th>
+                                <th><?= lang('FertilzerCompanies.phoneNo') ?></th>
 								<th><?= lang('FertilzerCompanies.firstName') ?></th>
+								<th><?= lang('FertilzerCompanies.lastName') ?></th>
 								<th><?= lang('FertilzerCompanies.emailAddress') ?></th>
 								<th class="text-nowrap"><?= lang('Basic.global.Action') ?></th>
 							</tr>
-						</thead>
-						<tbody>
-						<?php foreach ($fertilzerCompanyList as $item ) : ?>
-							<tr>
-								<td class="align-middle">
-									<?= empty($item->company) || strlen($item->company) < 51 ? esc($item->company) : character_limiter(esc($item->company), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->street) || strlen($item->street) < 51 ? esc($item->street) : character_limiter(esc($item->street), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->suburb) || strlen($item->suburb) < 51 ? esc($item->suburb) : character_limiter(esc($item->suburb), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->state) || strlen($item->state) < 51 ? esc($item->state) : character_limiter(esc($item->state), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->postcode) ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->phone_number) ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->last_name) || strlen($item->last_name) < 51 ? esc($item->last_name) : character_limiter(esc($item->last_name), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->first_name) || strlen($item->first_name) < 51 ? esc($item->first_name) : character_limiter(esc($item->first_name), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->email_address) ?>
-								</td>
-								<td class="align-middle text-center text-nowrap">
-									<?=anchor(route_to('editFertilzerCompany', $item->id), '<i class="bi bi-pencil-square"></i>', ['class'=>'btn btn-sm btn-outline-success btn-edit me-1',  'data-id'=>$item->id,]); ?> 
-									<?=anchor('#confirm2delete', '<i class="bi bi-trash"></i>', ['class'=>'btn btn-sm btn-outline-danger btn-delete ms-1', 'data-href'=>route_to('deleteFertilzerCompany', $item->id)]); ?>
-								</td>
-							</tr>
-
-						<?php endforeach; ?>
-						</tbody>
-					</table>
+	                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table body content goes here -->
+                    </tbody>
+                </table>
             </div><!--//.card-body -->
         </div><!--//.card -->
     </div><!--//.col -->
@@ -77,62 +44,137 @@
 
 <?=$this->section('additionalInlineJs') ?>
 
-    const lastColNr2 = $(".using-exportable-data-table").find("tr:first th").length - 1;
-    theTable = $('.using-exportable-data-table').DataTable({
-        "responsive": true,
-        "paging": true,
-        "lengthMenu": [ 5, 10, 25, 50, 75, 100, 250, 500, 1000, 2500 ],
-        "pageLength": 10,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
+const lastColNr = $('#tableOfFertilzercompanies').find("tr:first th").length - 1;
+            const actionBtns = function(data) {
+                return `<td class="text-right py-0 align-middle">
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-sm btn-outline-success btn-edit me-1" data-id="${data.id}"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm btn-outline-danger btn-delete ms-1" data-id="${data.id}"><i class="bi bi-trash"></i></button>
+                        </div>
+                        </td>`;
+            };
+            theTable = $('#tableOfFertilzercompanies').DataTable({
+                processing: true,
+                serverSide: true,
+                autoWidth: true,
+                responsive: true,
+                scrollX: true,
+                lengthMenu: [ 5, 10, 25, 50, 75, 100, 250, 500, 1000, 2500 ],
+                pageLength: 10,
+                lengthChange: true,
+                "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
-		],
-        "autoWidth": true,
-        "scrollX": true,
-        "stateSave": true,
-        "language": {
-            url: "/assets/dt/<?= config('Basics')->languages[$currentLocale] ?? config('Basics')->i18n ?>.json"
-        },
-        "columnDefs": [
-            {
-                orderable: false,
-                searchable: false,
-                targets: [0,lastColNr2]
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
             }
-        ]
+        }
+
+    ],
+                stateSave: true,
+                order: [[1, 'asc']],
+                language: {
+                    url: "/assets/dt/<?= config('Basics')->languages[$currentLocale] ?? config('Basics')->i18n ?>.json"
+                },
+                ajax : $.fn.dataTable.pipeline( {
+                    url: '<?= base_url().route_to('dataTableOfFertilzerCompanies') ?>',
+                    method: 'POST',
+                    headers: {'X-Requested-With': 'XMLHttpRequest'},
+                    async: true,
+                }),
+                columnDefs: [
+                    {
+                        orderable: false,
+                        searchable: false,
+                        targets: [0,lastColNr]
+                    }
+                ],
+                columns : [
+					{ 'data': 'company' },
+					{ 'data': 'street' },
+					{ 'data': 'suburb' },
+					{ 'data': 'postcode' },
+					{ 'data': 'state' },
+					{ 'data': 'phone_no' },
+					{ 'data': 'first_name' },
+					{ 'data': 'last_name' },
+					{ 'data': 'email_address' },
+                    { 'data': actionBtns }
+                ]
+            });
+
+$(document).on('click', '.btn-edit', function(e) {
+        window.location.href = `<?= base_url().route_to('fertilzerCompanyList') ?>/edit/${$(this).attr('data-id')}`;
     });
-
-    
-
     
     $(document).on('click', '.btn-delete', function(e) {
-            e.preventDefault();
-            const dataHref = $(this).data('href');
-            Swal.fire({
-                title: "<?= lang('Basic.global.sweet.sureToDeleteTitle', [lang('FertilzerCompanies.fertilzer company')]) ?>",
-                text: "<?= lang('Basic.global.sweet.sureToDeleteText') ?>",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: '<?= lang('Basic.global.sweet.deleteConfirmationButton') ?>',
-                cancelButtonText: '<?= lang('Basic.global.Cancel') ?>',
-                cancelButtonColor: '#d33'
-            }).then((result) => {
-                if (result.value) {
-                    window.location.href = `<?= base_url()?>${dataHref}`;
-                }
-            });
+        const itemName = $(this).closest('tr').find('td:first-child').text().trim();
+        Swal.fire({
+            title: `Are you sure you want to delete "${itemName}"?`,
+            text: '<?= lang('Basic.global.sweet.sureToDeleteText') ?>',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: '<?= lang('Basic.global.sweet.deleteConfirmationButton') ?>',
+            cancelButtonText: '<?= lang('Basic.global.Cancel') ?>',
+            cancelButtonColor: '#d33'
+        })
+        .then((result) => {
+            const dataId = $(this).data('id');
+            const row = $(this).closest('tr');
+            if (result.value) {
+                $.ajax({
+                    url: `<?= base_url().route_to('fertilzerCompanyList') ?>/${dataId}`,
+                    method: 'DELETE',
+                }).done((data, textStatus, jqXHR) => {
+                    Toast.fire({
+                        icon: 'success',
+                        title: data.msg ?? jqXHR.statusText,
+                    });
+                    theTable.ajax.reload();
+                    theTable.clearPipeline();
+                    theTable.row($(row)).invalidate().draw();
+                }).fail((jqXHR, textStatus, errorThrown) => {
+                    Toast.fire({
+                        icon: 'error',
+                        title: jqXHR.responseJSON.messages.error,
+                    });
+                })
+            }
         });
-    
+    });
     
 <?=$this->endSection() ?>
 
@@ -143,6 +185,7 @@
 
 
 <?= $this->section('additionalExternalJs') ?>
+
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" defer></script>

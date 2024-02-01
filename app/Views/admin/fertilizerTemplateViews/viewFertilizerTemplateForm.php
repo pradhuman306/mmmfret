@@ -16,7 +16,7 @@
 				<?= view("admin/fertilizerTemplateViews/_fertilizerTemplateFormItems") ?>
 			</div><!-- /.card-body -->
 			<div class="card-footer">
-				<?= anchor(route_to("fertilizerTemplateList2"), lang("Basic.global.Cancel"), [
+				<?= anchor(route_to("fertilizerTemplateList"), lang("Basic.global.Cancel"), [
         "class" => "btn btn-secondary float-start",
     ]) ?>
 				<input type="submit" class="btn btn-primary float-end" name="save" value="<?= lang("Basic.global.Save") ?>">

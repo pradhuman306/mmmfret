@@ -74,7 +74,6 @@ class CropTypesController extends \App\Controllers\GoBaseController {
         $loggedInUsername = $user->username; // Replace 'username' with the actual field name in your user table
 
         $requestMethod = $this->request->getMethod();
-        
         if ($requestMethod === 'post') {
             $nullIfEmpty = true; // !(phpversion() >= '8.1');
     

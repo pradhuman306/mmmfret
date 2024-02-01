@@ -8,105 +8,31 @@
         <div class="card card-info">
             <div class="card-header">
                 <h3 class="card-title"><?=lang('SoilTestLabs.soilTestLabList') ?></h3>
+                <?=anchor(route_to('newSoilTestLab'), lang('Basic.global.addNew').' '.lang('SoilTestLabs.soilTestLab'), ['class'=>'btn btn-success float-end']); ?>
            </div><!--//.card-header -->
             <div class="card-body">
 				<?= view('Themes/_commonPartialsBs/_alertBoxes'); ?>
 
-					<table id="tableOfSoiltestlabs" class="table table-striped table-hover using-exportable-data-table" style="width: 100%;">
+					<table id="tableOfSoiltestlabs" class="table table-striped table-hover" style="width: 100%;">
 						<thead>
 							<tr>
-								<th class="text-nowrap"><?= lang('Basic.global.Action') ?></th>
 								<th><?= lang('SoilTestLabs.company') ?></th>
-								<th><?= lang('SoilTestLabs.clientId') ?></th>
-								<th><?= lang('SoilTestLabs.invoicePrefix') ?></th>
-								<th><?= lang('SoilTestLabs.status') ?></th>
-								<th><?= lang('SoilTestLabs.registrationDate') ?></th>
-								<th><?= lang('SoilTestLabs.street') ?></th>
+                                <th><?= lang('SoilTestLabs.street') ?></th>
 								<th><?= lang('SoilTestLabs.suburb') ?></th>
+                                <th><?= lang('SoilTestLabs.state') ?></th>
 								<th><?= lang('SoilTestLabs.postcode') ?></th>
-								<th><?= lang('SoilTestLabs.state') ?></th>
-								<th><?= lang('SoilTestLabs.country') ?></th>
-								<th><?= lang('SoilTestLabs.phoneNumber') ?></th>
-								<th><?= lang('SoilTestLabs.mobileNumber') ?></th>
-								<th><?= lang('SoilTestLabs.abn') ?></th>
-								<th><?= lang('SoilTestLabs.division') ?></th>
-								<th><?= lang('SoilTestLabs.lastName') ?></th>
+								<th><?= lang('SoilTestLabs.phoneNo') ?></th>
 								<th><?= lang('SoilTestLabs.firstName') ?></th>
-								<th><?= lang('SoilTestLabs.emailAddress') ?></th>
+								<th><?= lang('SoilTestLabs.lastName') ?></th>
+                                <th><?= lang('SoilTestLabs.emailAddress') ?></th>
 								<th class="text-nowrap"><?= lang('Basic.global.Action') ?></th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php foreach ($soilTestLabList as $item ) : ?>
-							<tr>
-								<td class="align-middle text-center text-nowrap">
-									<?=anchor(route_to('editSoilTestLab', $item->id), '<i class="bi bi-pencil-square"></i>', ['class'=>'btn btn-sm btn-warning btn-edit me-1',  'data-id'=>$item->id,]); ?> 
-									<?=anchor('#confirm2delete', '<i class="bi bi-trash"></i>', ['class'=>'btn btn-sm btn-danger btn-delete ms-1', 'data-href'=>route_to('deleteSoilTestLab', $item->id)]); ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->company) || strlen($item->company) < 51 ? esc($item->company) : character_limiter(esc($item->company), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->client_id) ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->invoice_prefix) ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->status) ?>
-								</td>
-								<td class="align-middle text-nowrap">
-									<?= empty($item->registration_date) ? '' : date('d/m/Y H:i', strtotime($item->registration_date))  ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->street) || strlen($item->street) < 51 ? esc($item->street) : character_limiter(esc($item->street), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->suburb) || strlen($item->suburb) < 51 ? esc($item->suburb) : character_limiter(esc($item->suburb), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->postcode) ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->state) || strlen($item->state) < 51 ? esc($item->state) : character_limiter(esc($item->state), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->country) || strlen($item->country) < 51 ? esc($item->country) : character_limiter(esc($item->country), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->phone_number) ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->mobile_number) ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->abn) || strlen($item->abn) < 51 ? esc($item->abn) : character_limiter(esc($item->abn), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->division) || strlen($item->division) < 51 ? esc($item->division) : character_limiter(esc($item->division), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->last_name) || strlen($item->last_name) < 51 ? esc($item->last_name) : character_limiter(esc($item->last_name), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= empty($item->first_name) || strlen($item->first_name) < 51 ? esc($item->first_name) : character_limiter(esc($item->first_name), 50)   ?>
-								</td>
-								<td class="align-middle">
-									<?= esc($item->email_address) ?>
-								</td>
-								<td class="align-middle text-center text-nowrap">
-									<?=anchor(route_to('editSoilTestLab', $item->id), '<i class="bi bi-pencil-square"></i>', ['class'=>'btn btn-sm btn-warning btn-edit me-1',  'data-id'=>$item->id,]); ?> 
-									<?=anchor('#confirm2delete', '<i class="bi bi-trash"></i>', ['class'=>'btn btn-sm btn-danger btn-delete ms-1', 'data-href'=>route_to('deleteSoilTestLab', $item->id)]); ?>
-								</td>
-							</tr>
 
-						<?php endforeach; ?>
 						</tbody>
 					</table>
             </div><!--//.card-body -->
-            <div class="card-footer">
-				<?=anchor(route_to('newSoilTestLab'), lang('Basic.global.addNew').' '.lang('SoilTestLabs.soilTestLab'), ['class'=>'btn btn-primary float-end']); ?>
-            </div><!--//.card-footer -->
         </div><!--//.card -->
     </div><!--//.col -->
 </div><!--//.row -->
@@ -115,63 +41,142 @@
 
 
 <?=$this->section('additionalInlineJs') ?>
-
-    const lastColNr2 = $(".using-exportable-data-table").find("tr:first th").length - 1;
-    theTable = $('.using-exportable-data-table').DataTable({
-        "responsive": true,
-        "paging": true,
-        "lengthMenu": [ 5, 10, 25, 50, 75, 100, 250, 500, 1000, 2500 ],
-        "pageLength": 10,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
+    
+            const lastColNr = $('#tableOfSoiltestlabs').find("tr:first th").length - 1;
+            const actionBtns = function(data) {
+                return `<td class="text-right py-0 align-middle">
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-sm btn-outline-success btn-edit me-1" data-id="${data.id}"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm btn-outline-danger btn-delete ms-1" data-id="${data.id}"><i class="bi bi-trash"></i></button>
+                        </div>
+                        </td>`;
+            };
+            theTable = $('#tableOfSoiltestlabs').DataTable({
+                processing: true,
+                serverSide: true,
+                autoWidth: true,
+                responsive: true,
+                scrollX: true,
+                lengthMenu: [ 5, 10, 25, 50, 75, 100, 250, 500, 1000, 2500 ],
+                pageLength: 10,
+                lengthChange: true,
+                "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
-		],
-        "autoWidth": true,
-        "scrollX": true,
-        "stateSave": true,
-        "language": {
-            url: "/assets/dt/<?= config('Basics')->languages[$currentLocale] ?? config('Basics')->i18n ?>.json"
-        },
-        "columnDefs": [
-            {
-                orderable: false,
-                searchable: false,
-                targets: [0,lastColNr2]
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
             }
-        ]
-    });
+        }
 
-    
-
-    
-    $(document).on('click', '.btn-delete', function(e) {
-            e.preventDefault();
-            const dataHref = $(this).data('href');
-            Swal.fire({
-                title: "<?= lang('Basic.global.sweet.sureToDeleteTitle', [lang('SoilTestLabs.soil test lab')]) ?>",
-                text: "<?= lang('Basic.global.sweet.sureToDeleteText') ?>",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: '<?= lang('Basic.global.sweet.deleteConfirmationButton') ?>',
-                cancelButtonText: '<?= lang('Basic.global.Cancel') ?>',
-                cancelButtonColor: '#d33'
-            }).then((result) => {
-                if (result.value) {
-                    window.location.href = `<?= base_url()?>${dataHref}`;
-                }
+		],
+                stateSave: true,
+                order: [[1, 'asc']],
+                language: {
+                    url: "/assets/dt/<?= config('Basics')->languages[$currentLocale] ?? config('Basics')->i18n ?>.json"
+                },
+                ajax : $.fn.dataTable.pipeline( {
+                    url: '<?= base_url().route_to('dataTableOfSoilTestLabs') ?>',
+                    method: 'POST',
+                    headers: {'X-Requested-With': 'XMLHttpRequest'},
+                    async: true,
+                }),
+                columnDefs: [
+                    {
+                        orderable: false,
+                        searchable: false,
+                        targets: [0,lastColNr]
+                    }
+                ],
+                columns : [
+					{ 'data': 'company' },
+                    { 'data': 'street' },
+                    { 'data': 'suburb' },
+					{ 'data': 'state' },
+					{ 'data': 'postcode' },
+					{ 'data': 'phone_no' },
+					{ 'data': 'first_name' },
+					{ 'data': 'last_name' },
+					{ 'data': 'email_address' },
+                    { 'data': actionBtns }
+                ]
             });
-        });
+
     
+$(document).on('click', '.btn-edit', function(e) {
+        window.location.href = `<?= base_url().route_to('soilTestLabList') ?>/${$(this).attr('data-id')}/edit`;
+    });
+    
+$(document).on('click', '.btn-delete', function(e) {
+    const itemName = $(this).closest('tr').find('td:first-child').text().trim();
+        Swal.fire({
+            title: `Are you sure you want to delete "${itemName}"?`,
+            text: '<?= lang('Basic.global.sweet.sureToDeleteText') ?>',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: '<?= lang('Basic.global.sweet.deleteConfirmationButton') ?>',
+            cancelButtonText: '<?= lang('Basic.global.Cancel') ?>',
+            cancelButtonColor: '#d33'
+        })
+        .then((result) => {
+            const dataId = $(this).data('id');
+            const row = $(this).closest('tr');
+            if (result.value) {
+                $.ajax({
+                    url: `<?= base_url().route_to('soilTestLabList') ?>/${dataId}`,
+                    method: 'DELETE',
+                }).done((data, textStatus, jqXHR) => {
+                    Toast.fire({
+                        icon: 'success',
+                        title: data.msg ?? jqXHR.statusText,
+                    });
+                    theTable.ajax.reload();
+                    theTable.clearPipeline();
+                    theTable.row($(row)).invalidate().draw();
+                }).fail((jqXHR, textStatus, errorThrown) => {
+                    Toast.fire({
+                        icon: 'error',
+                        title: jqXHR.responseJSON.messages.error,
+                    });
+                })
+            }
+        });
+    });
+                                
+    
+
     
 <?=$this->endSection() ?>
 

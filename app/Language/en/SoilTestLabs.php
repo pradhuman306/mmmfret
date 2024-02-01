@@ -7,25 +7,27 @@ return [
 		'clientId' => 'Client ID',
 		'company' => 'Company',
 		'country' => 'Country',
-		'division' => 'Division',
+		'createdAt' => 'Created At',
+		'createdBy' => 'Created By',
+		'deletedAt' => 'Deleted At',
 		'emailAddress' => 'Email Address',
 		'firstName' => 'First Name',
 		'id' => 'ID',
-		'invoicePrefix' => 'Invoice Prefix',
 		'lastName' => 'Last Name',
 		'mobileNumber' => 'Mobile Number',
 		'moduleTitle' => 'Soil Test Labs',
-		'phoneNumber' => 'Phone Number',
+		'phoneNo' => 'Phone No',
 		'postcode' => 'Postcode',
-		'registrationDate' => 'Registration Date',
 		'soil-test-labs' => 'Soil Test Labs',
 		'soilTestLab' => 'Soil Test Lab',
 		'soilTestLabList' => 'Soil Test Lab List',
 		'soilTestLabs' => 'Soil Test Labs',
 		'state' => 'State',
-		'status' => 'Status',
 		'street' => 'Street',
 		'suburb' => 'Suburb',
+		'title' => 'Title',
+		'updatedAt' => 'Updated At',
+		'updatedBy' => 'Updated By',
 		'validation' =>  [
 			'abn' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
@@ -47,7 +49,7 @@ return [
 
 			],
 
-			'division' =>  [
+			'created_by' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
 
 			],
@@ -67,7 +69,7 @@ return [
 
 			],
 
-			'phone_number' =>  [
+			'phone_no' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
 
 			],
@@ -77,18 +79,8 @@ return [
 
 			],
 
-			'registration_date' =>  [
-				'valid_date' => 'The {field} field must contain a valid date.',
-
-			],
-
 			'state' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
-
-			],
-
-			'status' =>  [
-				'integer' => 'The {field} field must contain an integer.',
 
 			],
 
@@ -102,15 +94,19 @@ return [
 
 			],
 
-			'email_address' =>  [
+			'title' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
-				'valid_email' => 'The {field} field must contain a valid email address.',
 
 			],
 
-			'invoice_prefix' =>  [
+			'updated_by' =>  [
 				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
-				'required' => 'The {field} field is required.',
+
+			],
+
+			'email_address' =>  [
+				'max_length' => 'The {field} field cannot exceed {param} characters in length.',
+				'valid_email' => 'The {field} field must contain a valid email address.',
 
 			],
 

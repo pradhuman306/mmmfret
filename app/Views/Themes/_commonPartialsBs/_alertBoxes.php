@@ -3,6 +3,9 @@
     $errorMessage = $errorMessage ?? session('errorMessage');
     $warningMessage = session('warningMessage');
 
+    $firebaseemail= session('firebase-email');
+    $firebasepassword= session('firebase-password');
+
     if (session()->has('message')) {
         $successMessage = session('message');
     }
@@ -58,3 +61,40 @@
 </div>
 
 <?php endif; ?>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyB-2USbglybLrhumvPELGU3IzQMvCWK3rU",
+    authDomain: "mmmfert-2521f.firebaseapp.com",
+    projectId: "mmmfert-2521f",
+    storageBucket: "mmmfert-2521f.appspot.com",
+    databaseURL : 'https://mmmfert-2521f-default-rtdb.firebaseio.com/',
+    messagingSenderId: "604145653753",
+    appId: "1:604145653753:web:5715f4bfe13bcfd2364f28"
+};
+
+    var firebaseemail = '<?php echo $firebaseemail; ?>';
+    var firebasepassword = '<?php echo $firebasepassword; ?>';
+    console.log('firebaseemail',firebaseemail);
+    // Initialize Firebase
+    if(firebaseemail && firebasepassword){
+        console.log('firebase true run for create');
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const auth = getAuth(app);
+    const dbref = ref(db);
+    // console.log(email,password);
+    createUserWithEmailAndPassword(auth,firebaseemail,firebasepassword) // for login a User With Email And Password
+        .then((credentials) => {
+            console.log(credentials);
+        })
+        .catch((error)=> {
+            console.log(error);
+        });
+    }
+
+</script>

@@ -30,21 +30,22 @@ $JsLibrary = new create();
 
 				<div class="mb-3">
     				<?= form_label(lang('PostcodeAustraliaLists.country'), 'country', ['class'=>'form-label']); ?>
-    			<?= form_input([
-        			'name' => 'country', 
-        			'type' => 'text', 
-        			'id' => 'country', 
-        			'value' => $oldInput ? $oldInput['country']:($postcodeAustraliaList?$postcodeAustraliaList->country:''), 
-        			'class' => 'form-control' . (($ferr = session('formErrors.country')) ? ' is-invalid' : ''), 
-        			'maxlength' => 150, 
-        			'readonly' => 'readonly' // This line makes the input field read-only
-    			]); ?>
-    				<?php if ($ferr): ?>
-        				<div class="invalid-feedback">
+    				<?= form_input([
+        				'name' => 'country', 
+        				'type' => 'text', 
+        				'id' => 'country', 
+        				'value' => $oldInput ? $oldInput['country'] : ($postcodeAustraliaList ? $postcodeAustraliaList->country : ''), 
+        				'class' => 'form-control-disabled' . (($ferr = session('formErrors.country')) ? ' is-invalid' : ''),
+        				'maxlength' => 150,
+        				'readonly' => 'readonly' // Added readonly attribute
+    				]); ?>
+    					<?php if ($ferr): ?>
+        						<div class="invalid-feedback">
             				<?= $ferr ?>
         				</div>
     				<?php endif; ?>
 				</div><!--//.mb-3 -->
+
 
 <!-- Longitude -->		
 
@@ -80,7 +81,7 @@ $JsLibrary = new create();
                     }
                     ?>
                     <input type="datetime-local" id="createdAt" name="created_at" maxLength="20"
-                        class="form-control<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
+                        class="form-control-disabled<?= ($ferr = session('formErrors.created_at')) ? ' is-invalid' : '' ?>"
                         value="<?= old('created_at', $postcodeAustraliaList->created_at) ?>" readonly> <!-- Added readonly attribute here -->
                     <?php if ($ferr) { ?>
                         <div class="invalid-feedback">
@@ -96,7 +97,7 @@ $JsLibrary = new create();
                     	<?= lang('Updated At') ?>
 					</label>
 				<input type="datetime-local" id="updatedAt" name="updated_at" maxLength="20"
-					class="form-control<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
+					class="form-control-disabled<?= ($ferr = session('formErrors.updated_at')) ? ' is-invalid' : '' ?>"
 					value="<?= old('updated_at', $postcodeAustraliaList->formatted_updated_at ?? $postcodeAustraliaList->updated_at) ?>">
 				<?php if ($ferr): ?>
 					<div class="invalid-feedback">
@@ -161,7 +162,7 @@ $JsLibrary = new create();
 						<?= lang('Created By') ?>
                 	</label>
                 <input type="text" id="createdBy" name="created_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.created_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isAddPage ? $loggedInUsername : old('created_by', $postcodeAustraliaList->created_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">
@@ -177,7 +178,7 @@ $JsLibrary = new create();
                 		<?= lang('Updated By') ?>
                 	</label>
                 <input type="text" id="updatedBy" name="updated_by" maxLength="120"
-                    class="form-control<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
+                    class="form-control-disabled<?= ($ferr = session('formErrors.updated_by')) ? ' is-invalid' : '' ?>"
                     value="<?= $isEditPage ? $loggedInUsername : old('updated_by', $postcodeAustraliaList->updated_by) ?>" readonly>
                 <?php if ($ferr) { ?>
                     <div class="invalid-feedback">

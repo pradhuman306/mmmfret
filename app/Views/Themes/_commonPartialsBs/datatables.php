@@ -1,6 +1,6 @@
 <!-- Push section css -->
 <?= $this->section('css') ?>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.css">
 <?= $this->endSection() ?>
 
 <?= $this->section('footerAdditions') ?>
@@ -10,8 +10,8 @@
 <!-- Push additional js -->
 <?= $this->section('additionalExternalJs') ?>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment-with-locales.min.js" defer></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" defer></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.js" defer></script>
 <?= $this->endSection() ?>
 
 

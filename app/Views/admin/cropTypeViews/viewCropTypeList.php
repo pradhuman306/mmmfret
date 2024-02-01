@@ -2,13 +2,14 @@
 <?=$this->include('Themes/_commonPartialsBs/sweetalert') ?>
 <?=$this->extend('Themes/'.config('Basics')->theme['name'].'/AdminLayout/defaultLayout') ?>
 <?=$this->section('content');  ?>
+
 <div class="row">
     <div class="col-md-12">
-        <div class="card-header">
+        <div class="card card-info">
+            <div class="card-header">
                 <h3 class="card-title"><?=lang('CropTypes.cropTypeList') ?></h3>
                 <?=anchor(route_to('newCropType'), lang('Basic.global.addNew').' '.lang('CropTypes.cropType'), ['class'=>'btn btn-success float-end']); ?>
            </div><!--//.card-header -->
-           <br>
             <div class="card-body">
 				<?= view('Themes/_commonPartialsBs/_alertBoxes'); ?>
 
@@ -62,13 +63,45 @@ const lastColNr2 = $(".using-exportable-data-table").find("tr:first th").length 
         "info": true,
         "dom": 'lfrtipB', // 'lfBrtip', // you can try different layout combinations by uncommenting one or the other
 		// "dom": '<"top"lf><"clear">rt<"bottom"ipB><"clear">',  // remember to comment this line if you uncomment the above
-		"buttons": [
-			'copy', 'csv', 'excel', 'print', {
-				extend: 'pdfHtml5',
-				orientation: 'landscape',
-				pageSize: 'A4'
-			}
-		],
+        "buttons": [
+    {
+        extend: 'copy',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'csv',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'excel',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'print',
+        exportOptions: {
+            columns: ':not(:last-child)'
+        }
+    },
+    {
+        extend: 'pdfHtml5',
+            orientation: 'landscape',
+            pageSize: 'A4',
+            customize: function (doc) {
+                // Use the customizePdf function from pdfCustomization.js
+                customizePdf(doc);
+            },
+            exportOptions: {
+                columns: ':not(:last-child)'
+            }
+        }
+
+    ],
         "autoWidth": true,
         "scrollX": true,
         "stateSave": true,
@@ -113,6 +146,7 @@ const lastColNr2 = $(".using-exportable-data-table").find("tr:first th").length 
 
 
 <?= $this->section('additionalExternalJs') ?>
+
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.<?=config('Basics')->theme['name'] == 'Bootstrap5' ? 'bootstrap5' : 'bootstrap4' ?>.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" defer></script>

@@ -139,6 +139,7 @@ $routes->group('{locale}/admin', [], function($routes) {
 		$routes->get('index', 'FertilzerCompaniesController::index', ['as' => 'fertilzerCompanyIndex']);
 		$routes->get('list', 'FertilzerCompaniesController::index', ['as' => 'fertilzerCompanyList2']);
 		$routes->get('add', 'FertilzerCompaniesController::add', ['as' => 'newFertilzerCompany']);
+		$routes->post('datatable', 'FertilzerCompaniesController::datatable', ['as' => 'dataTableOfFertilzerCompanies']);
 		$routes->post('add', 'FertilzerCompaniesController::add', ['as' => 'createFertilzerCompany']);
 		$routes->get('edit/(:num)', 'FertilzerCompaniesController::edit/$1', ['as' => 'editFertilzerCompany']);
 		$routes->post('edit/(:num)', 'FertilzerCompaniesController::edit/$1', ['as' => 'updateFertilzerCompany']);
@@ -146,6 +147,19 @@ $routes->group('{locale}/admin', [], function($routes) {
 		$routes->post('allmenuitems', 'FertilzerCompaniesController::allItemsSelect', ['as' => 'select2ItemsOfFertilzerCompanies']);
 		$routes->post('menuitems', 'FertilzerCompaniesController::menuItems', ['as' => 'menuItemsOfFertilzerCompanies']);
 	});
+	
+	$routes->group('fertilzers', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+		$routes->get('', 'FertilzersController::index', ['as' => 'fertilzerList']);
+		$routes->get('add', 'FertilzersController::add', ['as' => 'newFertilzer']);
+		$routes->post('add', 'FertilzersController::add', ['as' => 'createFertilzer']);
+		$routes->post('create', 'FertilzersController::create', ['as' => 'ajaxCreateFertilzer']);
+		$routes->put('(:num)/update', 'FertilzersController::update/$1', ['as' => 'ajaxUpdateFertilzer']);
+		$routes->post('(:num)/edit', 'FertilzersController::edit/$1', ['as' => 'updateFertilzer']);
+		$routes->post('datatable', 'FertilzersController::datatable', ['as' => 'dataTableOfFertilzers']);
+		$routes->post('allmenuitems', 'FertilzersController::allItemsSelect', ['as' => 'select2ItemsOfFertilzers']);
+		$routes->post('menuitems', 'FertilzersController::menuItems', ['as' => 'menuItemsOfFertilzers']);
+	});
+	$routes->resource('fertilzers', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'FertilzersController', 'except' => 'show,new,create,update']);
 	
 	$routes->group('fertilizer-templates', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 		$routes->get('', 'FertilizerTemplatesController::index', ['as' => 'fertilizerTemplateList']);
@@ -160,18 +174,18 @@ $routes->group('{locale}/admin', [], function($routes) {
 		$routes->post('menuitems', 'FertilizerTemplatesController::menuItems', ['as' => 'menuItemsOfFertilizerTemplates']);
 	});
 	
-	$routes->group('harvest-templates', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
-		$routes->get('', 'HarvestTemplatesController::index', ['as' => 'harvestTemplateList']);
-		$routes->get('add', 'HarvestTemplatesController::add', ['as' => 'newHarvestTemplate']);
-		$routes->post('add', 'HarvestTemplatesController::add', ['as' => 'createHarvestTemplate']);
-		$routes->post('create', 'HarvestTemplatesController::create', ['as' => 'ajaxCreateHarvestTemplate']);
-		$routes->put('(:num)/update', 'HarvestTemplatesController::update/$1', ['as' => 'ajaxUpdateHarvestTemplate']);
-		$routes->post('(:num)/edit', 'HarvestTemplatesController::edit/$1', ['as' => 'updateHarvestTemplate']);
-		$routes->post('datatable', 'HarvestTemplatesController::datatable', ['as' => 'dataTableOfHarvestTemplates']);
-		$routes->post('allmenuitems', 'HarvestTemplatesController::allItemsSelect', ['as' => 'select2ItemsOfHarvestTemplates']);
-		$routes->post('menuitems', 'HarvestTemplatesController::menuItems', ['as' => 'menuItemsOfHarvestTemplates']);
-	});
-	$routes->resource('harvest-templates', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'HarvestTemplatesController', 'except' => 'show,new,create,update']);
+	$routes->group('fertilzer-companies', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+	$routes->get('', 'FertilzerCompaniesController::index', ['as' => 'fertilzerCompanyList']);
+	$routes->get('add', 'FertilzerCompaniesController::add', ['as' => 'newFertilzerCompany']);
+	$routes->post('add', 'FertilzerCompaniesController::add', ['as' => 'createFertilzerCompany']);
+	$routes->post('create', 'FertilzerCompaniesController::create', ['as' => 'ajaxCreateFertilzerCompany']);
+	$routes->put('(:any)/update', 'FertilzerCompaniesController::update/$1', ['as' => 'ajaxUpdateFertilzerCompany']);
+	$routes->post('(:any)/edit', 'FertilzerCompaniesController::edit/$1', ['as' => 'updateFertilzerCompany']);
+	$routes->post('datatable', 'FertilzerCompaniesController::datatable', ['as' => 'dataTableOfFertilzerCompanies']);
+	$routes->post('allmenuitems', 'FertilzerCompaniesController::allItemsSelect', ['as' => 'select2ItemsOfFertilzerCompanies']);
+	$routes->post('menuitems', 'FertilzerCompaniesController::menuItems', ['as' => 'menuItemsOfFertilzerCompanies']);
+});
+	$routes->resource('fertilzer-companies', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'FertilzerCompaniesController', 'except' => 'show,new,create,update']);
 
 	
 	$routes->group('irrigation-templates', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
@@ -270,18 +284,71 @@ $routes->group('{locale}/admin', [], function($routes) {
 		$routes->post('menuitems', 'SettingsController::menuItems', ['as' => 'menuItemsOfSettings']);
 	});
 	
-	$routes->group('soil-test-labs', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+		$routes->group('soil-test-labs', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 		$routes->get('', 'SoilTestLabsController::index', ['as' => 'soilTestLabList']);
-		$routes->get('index', 'SoilTestLabsController::index', ['as' => 'soilTestLabIndex']);
-		$routes->get('list', 'SoilTestLabsController::index', ['as' => 'soilTestLabList2']);
 		$routes->get('add', 'SoilTestLabsController::add', ['as' => 'newSoilTestLab']);
 		$routes->post('add', 'SoilTestLabsController::add', ['as' => 'createSoilTestLab']);
-		$routes->get('edit/(:num)', 'SoilTestLabsController::edit/$1', ['as' => 'editSoilTestLab']);
-		$routes->post('edit/(:num)', 'SoilTestLabsController::edit/$1', ['as' => 'updateSoilTestLab']);
-		$routes->get('delete/(:num)', 'SoilTestLabsController::delete/$1', ['as' => 'deleteSoilTestLab']);
+		$routes->post('create', 'SoilTestLabsController::create', ['as' => 'ajaxCreateSoilTestLab']);
+		$routes->put('(:any)/update', 'SoilTestLabsController::update/$1', ['as' => 'ajaxUpdateSoilTestLab']);
+		$routes->post('(:any)/edit', 'SoilTestLabsController::edit/$1', ['as' => 'updateSoilTestLab']);
+		$routes->post('datatable', 'SoilTestLabsController::datatable', ['as' => 'dataTableOfSoilTestLabs']);
 		$routes->post('allmenuitems', 'SoilTestLabsController::allItemsSelect', ['as' => 'select2ItemsOfSoilTestLabs']);
 		$routes->post('menuitems', 'SoilTestLabsController::menuItems', ['as' => 'menuItemsOfSoilTestLabs']);
 	});
+		$routes->resource('soil-test-labs', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'SoilTestLabsController', 'except' => 'show,new,create,update']);
+
+		$routes->group('categories', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+			$routes->get('', 'CategoriesController::index', ['as' => 'categoryList']);
+			$routes->get('add', 'CategoriesController::add', ['as' => 'newCategory']);
+			$routes->post('add', 'CategoriesController::add', ['as' => 'createCategory']);
+			$routes->post('create', 'CategoriesController::create', ['as' => 'ajaxCreateCategory']);
+			$routes->put('(:num)/update', 'CategoriesController::update/$1', ['as' => 'ajaxUpdateCategory']);
+			$routes->post('(:num)/edit', 'CategoriesController::edit/$1', ['as' => 'updateCategory']);
+			$routes->post('datatable', 'CategoriesController::datatable', ['as' => 'dataTableOfCategories']);
+			$routes->post('allmenuitems', 'CategoriesController::allItemsSelect', ['as' => 'select2ItemsOfCategories']);
+			$routes->post('menuitems', 'CategoriesController::menuItems', ['as' => 'menuItemsOfCategories']);
+	});
+		$routes->resource('categories', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'CategoriesController', 'except' => 'show,new,create,update']);
+
+		$routes->group('water-rates', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+			$routes->get('', 'WaterRatesController::index', ['as' => 'waterRateList']);
+			$routes->get('add', 'WaterRatesController::add', ['as' => 'newWaterRate']);
+			$routes->post('add', 'WaterRatesController::add', ['as' => 'createWaterRate']);
+			$routes->post('create', 'WaterRatesController::create', ['as' => 'ajaxCreateWaterRate']);
+			$routes->put('(:num)/update', 'WaterRatesController::update/$1', ['as' => 'ajaxUpdateWaterRate']);
+			$routes->post('(:num)/edit', 'WaterRatesController::edit/$1', ['as' => 'updateWaterRate']);
+			$routes->post('datatable', 'WaterRatesController::datatable', ['as' => 'dataTableOfWaterRates']);
+			$routes->post('allmenuitems', 'WaterRatesController::allItemsSelect', ['as' => 'select2ItemsOfWaterRates']);
+			$routes->post('menuitems', 'WaterRatesController::menuItems', ['as' => 'menuItemsOfWaterRates']);
+	});
+		$routes->resource('water-rates', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'WaterRatesController', 'except' => 'show,new,create,update']);
+		
+		$routes->group('chemicals', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+		$routes->get('', 'ChemicalsController::index', ['as' => 'chemicalList']);
+		$routes->get('add', 'ChemicalsController::add', ['as' => 'newChemical']);
+		$routes->post('add', 'ChemicalsController::add', ['as' => 'createChemical']);
+		$routes->post('create', 'ChemicalsController::create', ['as' => 'ajaxCreateChemical']);
+		$routes->put('(:num)/update', 'ChemicalsController::update/$1', ['as' => 'ajaxUpdateChemical']);
+		$routes->post('(:num)/edit', 'ChemicalsController::edit/$1', ['as' => 'updateChemical']);
+		$routes->post('datatable', 'ChemicalsController::datatable', ['as' => 'dataTableOfChemicals']);
+		$routes->post('allmenuitems', 'ChemicalsController::allItemsSelect', ['as' => 'select2ItemsOfChemicals']);
+		$routes->post('menuitems', 'ChemicalsController::menuItems', ['as' => 'menuItemsOfChemicals']);
+	});
+	$routes->resource('chemicals', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'ChemicalsController', 'except' => 'show,new,create,update']);
+
+	
+	$routes->group('plant-nutrients', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
+		$routes->get('', 'PlantNutrientsController::index', ['as' => 'plantNutrientList']);
+		$routes->get('add', 'PlantNutrientsController::add', ['as' => 'newPlantNutrient']);
+		$routes->post('add', 'PlantNutrientsController::add', ['as' => 'createPlantNutrient']);
+		$routes->post('create', 'PlantNutrientsController::create', ['as' => 'ajaxCreatePlantNutrient']);
+		$routes->put('(:num)/update', 'PlantNutrientsController::update/$1', ['as' => 'ajaxUpdatePlantNutrient']);
+		$routes->post('(:num)/edit', 'PlantNutrientsController::edit/$1', ['as' => 'updatePlantNutrient']);
+		$routes->post('datatable', 'PlantNutrientsController::datatable', ['as' => 'dataTableOfPlantNutrients']);
+		$routes->post('allmenuitems', 'PlantNutrientsController::allItemsSelect', ['as' => 'select2ItemsOfPlantNutrients']);
+		$routes->post('menuitems', 'PlantNutrientsController::menuItems', ['as' => 'menuItemsOfPlantNutrients']);
+	});
+	$routes->resource('plant-nutrients', ['namespace'  => 'App\Controllers\Admin', 'controller' => 'PlantNutrientsController', 'except' => 'show,new,create,update']);
 	
 	$routes->group('users', ['namespace' => 'App\Controllers\Admin'], function ($routes) {
 		$routes->get('', 'UsersController::index', ['as' => 'userList']);
